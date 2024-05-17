@@ -66,18 +66,7 @@ public class GamePanel extends JPanel implements Runnable {
     }
     // update information such as character positions
     public void update(){
-        if(keyH.upPressed){
-            playerY -= playerSpeed;
-        }
-        if(keyH.downPressed){
-            playerY += playerSpeed;
-        }
-        if(keyH.leftPressed){
-            playerX -= playerSpeed;
-        }
-        if(keyH.rightPressed){
-            playerX += playerSpeed;
-        }
+        player.update();
     }
     // Draw the screen with the updated information
     public void paintComponent(Graphics g){

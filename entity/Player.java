@@ -11,6 +11,8 @@ public class Player extends entity{
     public Player(GamePanel gp, KeyHandler keyH){
         this.gp = gp;
         this.keyH = keyH;
+
+        setDefaultValues();
     }
     public void setDefaultValues(){
         x= 100;
@@ -18,16 +20,16 @@ public class Player extends entity{
         speed = 4;
     }
     public void update(){
-        if(keyH.upPressed){
+        if(keyH.upPressed == true){
             y -= speed;
         }
-        if(keyH.downPressed){
+        if(keyH.downPressed == true){
             y += speed;
         }
-        if(keyH.leftPressed){
+        if(keyH.leftPressed == true){
             x -= speed;
         }
-        if(keyH.rightPressed){
+        if(keyH.rightPressed == true){
             x += speed;
         }
     }
